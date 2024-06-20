@@ -1,12 +1,12 @@
 import { Text, View } from "react-native";
-import { TextInput, Card, Button } from 'react-native-paper';
+import { TextInput, Card, Button, RadioButton } from 'react-native-paper';
 
 export default props => {
-    return(
+    return (
         <View>
             <Card.Content>
                 <Text>Nome completo</Text>
-                <TextInput placeholder="Digite o nome completo"/>
+                <TextInput placeholder="Digite o nome completo" />
                 <Text>CPF</Text>
                 <TextInput placeholder="Digite a CPF" />
                 <Text>Telefone</Text>
@@ -17,9 +17,15 @@ export default props => {
                 <TextInput placeholder="Digite a Senha" />
                 <Text>Confirme sua senha</Text>
                 <TextInput placeholder="Confirmar senha" />
+                <RadioButton.Group onValueChange={newValue => setValue(newValue)} value={value}>
+                        <Text>First</Text>
+                        <RadioButton value="first" />
+                        <Text>Second</Text>
+                        <RadioButton value="second" />
+                </RadioButton.Group>
             </Card.Content>
             <Button icon="camera" mode="contained" onPress={() => console.log('Agendamento')}>Entrar</Button>
-            <Button icon="camera" mode="contained" onPress={() => console.log('Agendamento')}>Criar Conta</Button>
+            <Button icon="camera" mode="contained" onPress={() => console.log('Agendamento')}>Voltar</Button>
         </View>
     )
 }

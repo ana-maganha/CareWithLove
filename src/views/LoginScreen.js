@@ -7,7 +7,9 @@ export default props => {
         <View>
             <Card.Content>
                 <Text>Login</Text>
+                <Text>usuário</Text>
                 <TextInput placeholder="Digite o usuário"/>
+                <Text>Senha</Text>
                 <TextInput placeholder="Digite a senha" />
             </Card.Content>
             <Button icon="camera" mode="contained" onPress={() => console.log('Agendamento')}>Entrar</Button>
