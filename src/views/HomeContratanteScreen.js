@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Text, View, Card } from "react-native"
+import { Text, View } from "react-native"
+import { Button, Card } from 'react-native-paper';
 
 export default props => {
     return (
@@ -18,7 +19,6 @@ export default props => {
                 </Card.Content>
             </View>
             <View>
-                {/*COOOOOOOOOOOOOOORRRRRRRR*/}
             </View>
             <View>
                 <Text>Solicite um serviço</Text>
@@ -26,7 +26,6 @@ export default props => {
                 <Button icon="camera" mode="contained" onPress={() => console.log('Agendamento')}>Agendar</Button>
             </View>
             <View>
-                {/*COOOOOOOOOOOOOOORRRRRRRR*/}
             </View>
             <View>
                 <Text>Telefones de emergência</Text>
