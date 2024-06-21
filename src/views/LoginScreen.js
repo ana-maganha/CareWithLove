@@ -8,12 +8,12 @@ export default props => {
         <ScrollView containerstyle={estilos.container}>
             <View>
                 <Card.Content>
-                    <Text style={{marginTop: 15, marginBottom: 5}}>Usuário</Text>
-                    <TextInput placeholder="Digite o usuário" />
-                    <Text style={{marginTop: 15, marginBottom: 5}}>Senha</Text>
-                    <TextInput placeholder="Digite a senha" />
+                    <Text style={{ marginTop: 15, marginBottom: 5 }}>Usuário</Text>
+                    <TextInput style={{ backgroundColor: "#a2b5d6" }} placeholder="Digite o usuário" />
+                    <Text style={{ marginTop: 15, marginBottom: 5 }}>Senha</Text>
+                    <TextInput style={{ backgroundColor: "#a2b5d6" }} placeholder="Digite a senha" />
                 </Card.Content>
-                <View style={{alignItems: 'center', marginTop: 10}}>
+                <View style={{ alignItems: 'center', marginTop: 10 }}>
                     <Button mode="contained" onPress={() => console.log('Entrar')} style={estilos.botao}>Entrar</Button>
                     <Button mode="contained" onPress={() => console.log('Criar Conta')} style={estilos.botao}>Criar Conta</Button>
                 </View>
@@ -36,7 +36,7 @@ const estilos = StyleSheet.create({
     botao: {
         backgroundColor: '#003376',
         margin: 5,
-        width: 200,
+        width: 150,
         alignItems: 'center'
     }
 });

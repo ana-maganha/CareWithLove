@@ -6,25 +6,37 @@ export default props => {
     return (
         <ScrollView containerstyle={estilos.container}>
             <View>
-                <Text>Editar Perfil</Text>
                 <Card.Content>
-                    <Text>CEP:</Text>
-                    <TextInput placeholder="Digite seu CEP" />
-                    <Text>Endereço:</Text>
-                    <TextInput placeholder="Digite seu endereço" />
-                    <Text>Número:</Text>
-                    <TextInput placeholder="Digite o número da residência" />
-                    <Text>Diabético?</Text>
-                    <TextInput placeholder="Digite a e-mail" />
-                    <Text>Remédios</Text>
-                    <TextInput placeholder="Digite a Senha" />
-                    <Text>Restrição alimentar</Text>
-                    <TextInput placeholder="Confirmar senha" />
-                    <Text>Atividades</Text>
-                    <TextInput placeholder="Confirmar senha" />
+                    <Text style={{ marginTop: 15, marginBottom: 5 }}>CEP:</Text>
+                    <TextInput style={{ backgroundColor: "#a2b5d6" }} placeholder="Digite seu CEP" />
+                    <Text style={{ marginTop: 15, marginBottom: 5 }}>Endereço:</Text>
+                    <TextInput style={{ backgroundColor: "#a2b5d6" }} placeholder="Digite seu endereço" />
+                    <Text style={{ marginTop: 15, marginBottom: 5 }}>Número:</Text>
+                    <TextInput style={{ backgroundColor: "#a2b5d6" }} placeholder="Digite o número da residência" />
+                    <Text style={{ marginTop: 15, marginBottom: 5 }}>Diabético?</Text>
+                    <RadioButton.Group onValueChange={newValue => console.log("")} >
+                        <View style={{ flexDirection: "row", justifyContent: "space-around", width: "100%", margin: 15 }}>
+                            <View>
+                                <Text>Sim</Text>
+                                <RadioButton value="Sim" />
+                            </View>
+                            <View>
+                                <Text>Não</Text>
+                                <RadioButton value="Não" />
+                            </View>
+                        </View>
+                    </RadioButton.Group>
+                    <Text style={{ marginTop: 15, marginBottom: 5 }}>Remédios</Text>
+                    <TextInput style={{ backgroundColor: "#a2b5d6" }} placeholder="Toma algum remédios?" />
+                    <Text style={{ marginTop: 15, marginBottom: 5 }}>Restrição alimentar</Text>
+                    <TextInput style={{ backgroundColor: "#a2b5d6" }} placeholder="Quais as restrições alimentares" />
+                    <Text style={{ marginTop: 15, marginBottom: 5 }}>Atividades</Text>
+                    <TextInput style={{ backgroundColor: "#a2b5d6" }} placeholder="Atividades ocupacionais ou necessidade" />
                 </Card.Content>
-                <Button mode="contained" onPress={() => console.log('Adicionar')}>Adicionar</Button>
-                <Button mode="contained" onPress={() => console.log('Voltar')}>Voltar</Button>
+                <View style={{ alignItems: "center", marginTop: 10 }}>
+                    <Button mode="contained" onPress={() => console.log('Adicionar')} style={estilos.botao}>Adicionar</Button>
+                    <Button mode="contained" onPress={() => console.log('Voltar')} style={estilos.botao}>Voltar</Button>
+                </View>
             </View>
         </ScrollView>
     )
@@ -39,16 +51,6 @@ const estilos = StyleSheet.create({
     botao: {
         backgroundColor: '#003376',
         margin: 5,
-        width: 100,
+        width: 200,
     },
-    Cardss: {
-        marginTop: 10,
-    },
-    botaosss: {
-        alignItems: 'center'
-    },
-    conjuntoBtn: {
-        display: 'flex',
-        flexDirection: 'row'
-    }
 });

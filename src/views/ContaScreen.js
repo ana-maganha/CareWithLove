@@ -7,26 +7,26 @@ export default props => {
         <ScrollView containerstyle={estilos.container}>
             <View style={estilos.container}>
                 <Card.Content style={estilos.Cardss}>
-                    <Text>Nome completo</Text>
-                    <TextInput placeholder="Digite o nome completo" />
-                    <Text>CPF</Text>
-                    <TextInput placeholder="Digite a CPF" />
-                    <Text>Telefone</Text>
-                    <TextInput placeholder="Digite a telefone" />
-                    <Text>E-mail</Text>
-                    <TextInput placeholder="Digite a e-mail" />
-                    <Text>Senha</Text>
-                    <TextInput placeholder="Digite a Senha" />
-                    <Text>Confirme sua senha</Text>
-                    <TextInput placeholder="Confirmar senha" />
+                    <Text style={{ marginTop: 15, marginBottom: 5 }}>Nome completo</Text>
+                    <TextInput style={{ backgroundColor: "#a2b5d6" }} placeholder="Digite o nome completo" />
+                    <Text style={{ marginTop: 15, marginBottom: 5 }}>CPF</Text>
+                    <TextInput style={{ backgroundColor: "#a2b5d6" }} placeholder="Digite a CPF" />
+                    <Text style={{ marginTop: 15, marginBottom: 5 }}>Telefone</Text>
+                    <TextInput style={{ backgroundColor: "#a2b5d6" }} placeholder="Digite a telefone" />
+                    <Text style={{ marginTop: 15, marginBottom: 5 }}>E-mail</Text>
+                    <TextInput style={{ backgroundColor: "#a2b5d6" }} placeholder="Digite a e-mail" />
+                    <Text style={{ marginTop: 15, marginBottom: 5 }}>Senha</Text>
+                    <TextInput style={{ backgroundColor: "#a2b5d6" }} placeholder="Digite a Senha" />
+                    <Text style={{ marginTop: 15, marginBottom: 5 }}>Confirme sua senha</Text>
+                    <TextInput style={{ backgroundColor: "#a2b5d6" }} placeholder="Confirmar senha" />
                     <View style={estilos.conjuntoBtn}>
                         <RadioButton.Group onValueChange={newValue => console.log("")} >
-                            <View style={{flexDirection: "row", justifyContent: "space-around", width: "100%"}}>
-                                <View style={{width: '25%'}}>
+                            <View style={{ flexDirection: "row", justifyContent: "space-around", width: "100%", margin: 15 }}>
+                                <View>
                                     <Text>Contratante</Text>
                                     <RadioButton value="Contratante" />
                                 </View>
-                                <View style={{width: '25%'}}>
+                                <View>
                                     <Text>Prestador</Text>
                                     <RadioButton value="Prestador" />
                                 </View>
@@ -35,7 +35,7 @@ export default props => {
                     </View>
                 </Card.Content>
 
-                <View style={estilos.botoes}>
+                <View style={{ alignItems: 'center' }}>
                     <Button mode="contained" onPress={() => console.log('Entrar')} style={estilos.botao}>Entrar</Button>
                     <Button mode="contained" onPress={() => console.log('Voltar')} style={estilos.botao}>Voltar</Button>
                 </View>
@@ -57,9 +57,6 @@ const estilos = StyleSheet.create({
     },
     Cardss: {
         marginTop: 10,
-    },
-    botoes: {
-        alignItems: 'center'
     },
     conjuntoBtn: {
         display: 'flex',
