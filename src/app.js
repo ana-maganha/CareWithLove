@@ -17,12 +17,74 @@ function App() {
     return (
         <NavigationContainer>
             <Drawer.Navigator>
-                <Drawer.Screen name="Home" component={HomeContratanteScreen} />
-                <Drawer.Screen name="Agendamento" component={AgendamentoScreen} />
-                <Drawer.Screen name="Conta" component={ContaScreen} />
-                <Drawer.Screen name="Login" component={LoginScreen} />
-                <Drawer.Screen name="Perfil" component={PerfilContratanteScreen} />
-                <Drawer.Screen name="Editar Perfil" component={PerfilContratanteEditarScreen} />
+                <Drawer.Screen name="Home" component={HomeContratanteScreen} options={{
+                    headerStyle: {
+                        backgroundColor: "#003376",
+                        height: 146,
+
+                    },
+                    headerTitleStyle : {
+                        color: 'white',
+                        marginBottom: 'auto',
+                        paddingTop: 20
+                    }
+
+                }} />
+                <Drawer.Screen name="Agendamento" component={AgendamentoScreen} options={{
+                    headerStyle: {
+                        backgroundColor: "#003376",
+                        height: 146
+                    },
+                    headerTitleStyle : {
+                        color: 'white',
+                        marginBottom: 'auto',
+                        paddingTop: 20
+                    }
+                }} />
+                <Drawer.Screen name="Conta" component={ContaScreen} options={{
+                    headerStyle: {
+                        backgroundColor: "#003376",
+                        height: 146
+                    },
+                    headerTitleStyle : {
+                        color: 'white',
+                        marginBottom: 'auto',
+                        paddingTop: 20
+                    }
+                }} />
+                <Drawer.Screen name="Login" component={LoginScreen} options={{
+                    headerStyle: {
+                        backgroundColor: "#003376",
+                        height: 146
+                    },
+                    headerTitleStyle : {
+                        color: 'white',
+                        marginBottom: 'auto',
+                        paddingTop: 20
+                    }
+                }} />
+                <Drawer.Screen name="Perfil" component={PerfilContratanteScreen} options={{
+                    headerStyle: {
+                        backgroundColor: "#003376",
+                        height: 146
+                    },
+                    headerTitleStyle : {
+                        color: 'white',
+                        marginBottom: 'auto',
+                        paddingTop: 20
+                    }
+                }} />
+                <Drawer.Screen name="Editar Perfil" component={PerfilContratanteEditarScreen} options={{
+                    headerStyle: {
+                        backgroundColor: "#003376",
+                        height: 146
+                    },
+                    headerTitleStyle : {
+                        color: 'white',
+                        marginBottom: 'auto',
+                        paddingTop: 20
+                    }
+                }} />
             </Drawer.Navigator>
         </NavigationContainer>
     );

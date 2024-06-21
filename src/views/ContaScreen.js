@@ -3,7 +3,7 @@ import { TextInput, Card, Button, RadioButton } from 'react-native-paper';
 
 export default props => {
     return (
-        <View style={estilosBotao}>
+        <View style={estilos.container}>
             <Card.Content>
                 <Text>Nome completo</Text>
                 <TextInput placeholder="Digite o nome completo" />
@@ -17,7 +17,7 @@ export default props => {
                 <TextInput placeholder="Digite a Senha" />
                 <Text>Confirme sua senha</Text>
                 <TextInput placeholder="Confirmar senha" />
-                <View>
+                <View style={estilos.conjuntoBtn}>
                     <RadioButton.Group onValueChange={newValue => console.log("")}>
                         <Text>Contratante</Text>
                         <RadioButton value="Contratante" />
@@ -26,20 +26,26 @@ export default props => {
                     </RadioButton.Group>
                 </View>
             </Card.Content>
-            <Button icon="camera" mode="contained" onPress={() => console.log('Entrar')}>Entrar</Button>
-            <Button icon="camera" mode="contained" onPress={() => console.log('Voltar')}>Voltar</Button>
+
+            <Button icon="camera" mode="contained" onPress={() => console.log('Entrar')} style={estilos.botao}>Entrar</Button>
+            <Button icon="camera" mode="contained" onPress={() => console.log('Voltar')} style={estilos.botao}>Voltar</Button>
         </View>
     )
 }
 
 const estilos = StyleSheet.create({
     container: {
-      flex: 1,
-      justifyContent: 'flex-end',
-      backgroundColor: '#ecf0f1',
+        flex: 1,
+        justifyContent: 'flex-end',
+        backgroundColor: '#ecf0f1'
     },
     botao: {
-      flexDirection: 'row',
-      flexWrap: 'wrap',
+        flexDirection: 'row',
+        flexWrap: 'wrap'
     },
-  });
+    conjuntoBtn: {
+        display: 'flex',
+        flexDirection: 'row'
+    },
+
+});
