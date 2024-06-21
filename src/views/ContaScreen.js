@@ -1,9 +1,9 @@
-import { Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import { TextInput, Card, Button, RadioButton } from 'react-native-paper';
 
 export default props => {
     return (
-        <View>
+        <View style={estilosBotao}>
             <Card.Content>
                 <Text>Nome completo</Text>
                 <TextInput placeholder="Digite o nome completo" />
@@ -17,15 +17,29 @@ export default props => {
                 <TextInput placeholder="Digite a Senha" />
                 <Text>Confirme sua senha</Text>
                 <TextInput placeholder="Confirmar senha" />
-                <RadioButton.Group onValueChange={newValue => setValue(newValue)} value={value}>
-                        <Text>First</Text>
-                        <RadioButton value="first" />
-                        <Text>Second</Text>
-                        <RadioButton value="second" />
-                </RadioButton.Group>
+                <View>
+                    <RadioButton.Group onValueChange={newValue => console.log("")}>
+                        <Text>Contratante</Text>
+                        <RadioButton value="Contratante" />
+                        <Text>Prestador</Text>
+                        <RadioButton value="Prestador" />
+                    </RadioButton.Group>
+                </View>
             </Card.Content>
-            <Button icon="camera" mode="contained" onPress={() => console.log('Agendamento')}>Entrar</Button>
-            <Button icon="camera" mode="contained" onPress={() => console.log('Agendamento')}>Voltar</Button>
+            <Button icon="camera" mode="contained" onPress={() => console.log('Entrar')}>Entrar</Button>
+            <Button icon="camera" mode="contained" onPress={() => console.log('Voltar')}>Voltar</Button>
         </View>
     )
 }
+
+const estilos = StyleSheet.create({
+    container: {
+      flex: 1,
+      justifyContent: 'flex-end',
+      backgroundColor: '#ecf0f1',
+    },
+    botao: {
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+    },
+  });

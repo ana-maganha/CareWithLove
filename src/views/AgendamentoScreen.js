@@ -40,7 +40,7 @@ export default props => {
                         <Text variant="titleLarge">Selecione o período</Text>
                     </Card.Content>
                 </View>
-                <Button icon="camera" mode="contained" onPress={() => console.log('Agendamento')}>Solicitar</Button>
+                <Button icon="camera" mode="contained" onPress={() => console.log('Solicitar')}>Solicitar</Button>
             </View>
         </View>
     )

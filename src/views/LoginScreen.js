@@ -12,8 +12,8 @@ export default props => {
                 <Text>Senha</Text>
                 <TextInput placeholder="Digite a senha" />
             </Card.Content>
-            <Button icon="camera" mode="contained" onPress={() => console.log('Agendamento')}>Entrar</Button>
-            <Button icon="camera" mode="contained" onPress={() => console.log('Agendamento')}>Criar Conta</Button>
+            <Button icon="camera" mode="contained" onPress={() => console.log('Entrar')}>Entrar</Button>
+            <Button icon="camera" mode="contained" onPress={() => console.log('Criar Conta')}>Criar Conta</Button>
         </View>
     )
 }

@@ -23,7 +23,7 @@ export default props => {
             <View>
                 <Text>Solicite um serviço</Text>
                 <Card.Cover source={{ uri: 'https://picsum.photos/700' }} />
-                <Button icon="camera" mode="contained" onPress={() => console.log('Agendamento')}>Agendar</Button>
+                <Button icon="camera" mode="contained" onPress={() => console.log('Agendar')}>Agendar</Button>
             </View>
             <View>
             </View>
